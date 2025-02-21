@@ -1,0 +1,157 @@
+.filtersContainer {
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 2px solid transparent;
+  border-image: repeating-linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.3) 0,
+    rgba(128, 128, 128, 0.3) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-image-slice: 1;
+}
+
+.filterGroup {
+  /* margin: 20px; */
+  padding: 20px;
+  border-bottom: 2px solid transparent;
+  border-image: repeating-linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.3) 0,
+    rgba(128, 128, 128, 0.3) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-image-slice: 1;
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rangeInput {
+  -webkit-appearance: none; /* Hides the default slider style */
+  appearance: none;
+  width: 100%;
+  margin: 10px 0;
+  height: 4px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    #7c3aed 0%,
+    #7c3aed var(--slider-fill-experience, 0%),
+    #e5e7eb var(--slider-fill-experience, 0%),
+    #e5e7eb 100%
+  );
+  outline: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.salarySlider .rangeInput {
+  background: linear-gradient(
+    to right,
+    #7c3aed 0%,
+    #7c3aed var(--slider-fill-salary, 0%),
+    #e5e7eb var(--slider-fill-salary, 0%),
+    #e5e7eb 100%
+  );
+}
+
+.rangeInput::-webkit-slider-runnable-track {
+  background: transparent; /* Track styling controlled dynamically */
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #7c3aed; /* Violet thumb */
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.rangeInput::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #7c3aed; /* Violet thumb */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.rangeInput::-moz-range-track {
+  background: transparent; /* Track styling controlled dynamically */
+}
+
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.startLabel {
+  position: absolute;
+  left: 0;
+  top: 30px; /* Adjust as per your design */
+  font-size: 12px;
+  color: #666;
+}
+
+.dynamicValue {
+  position: absolute;
+  top: 30px; /* Adjust this to position the value below the slider thumb */
+  font-size: 12px;
+  color: #666;
+  transform: translateX(-50%);
+  z-index: 3;
+  transition: left 0.1s ease-in-out;
+}
+
+.textInput {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 14px;
+  width: 60px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filterValue {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+.sortby {
+  border-bottom: none;
+}

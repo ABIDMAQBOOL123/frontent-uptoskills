@@ -1,0 +1,190 @@
+.heroContent {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.mainTitle {
+  font-size: 60px; 
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+  line-height: 1.4;
+}
+
+.orangeOutline {
+  font-size: 60px; 
+  font-weight: bold;
+  -webkit-text-stroke: 2px #ff5a1f; 
+  color: transparent; 
+}
+
+.blackText {
+  font-size: 60px; 
+  font-weight: bold;
+  color: black;
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; 
+  width: 50%; 
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  background-color: #f9f9f9;
+  padding: 8px 10px; 
+  overflow: hidden;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 10px 10px 35px; 
+  border: none;
+  outline: none;
+  font-size: 14px; 
+  background-color: inherit;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px; 
+  color: #ff5a1f;
+}
+
+.divider {
+  width: 1px;
+  height: 30px; 
+  background-color: #ddd;
+}
+
+.searchButton {
+  background-color: #ff5a1f;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #e14a0f;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For smaller screens like tablets */
+@media (max-width: 768px) {
+  .mainTitle, .orangeOutline, .blackText {
+    font-size: 40px; /* Decrease title size */
+  }
+
+  .description {
+    font-size: 16px; /* Slightly smaller description text */
+  }
+
+  .searchBar {
+    width: 80%; /* Increase width for smaller devices */
+  }
+
+  .searchInput {
+    font-size: 12px; /* Adjust input font size */
+  }
+
+  .searchButton {
+    font-size: 12px; /* Adjust button font size */
+    padding: 8px 15px; /* Adjust padding */
+  }
+}
+
+/* For very small screens like mobile phones */
+@media (max-width: 480px) {
+  .mainTitle, .orangeOutline, .blackText {
+    font-size: 32px; /* Further decrease title size */
+  }
+
+  .description {
+    font-size: 14px; /* Smaller description text */
+  }
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items horizontally */
+    width: 100%; /* Full width on mobile */
+    gap: 5px; /* Add small gaps between items */
+    padding: 8px; /* Adjust padding */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+
+  .inputGroup {
+    flex: 1; /* Let the input take up most of the space */
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-right: 1px solid #ddd; /* Add a divider between inputs */
+  }
+
+  .searchInput {
+    flex: 1; /* Input fills remaining space */
+    padding: 8px 10px 8px 35px; /* Spacing for icon */
+    border: none;
+    outline: none;
+    font-size: 14px; /* Adjust font size for small screens */
+    background-color: inherit;
+  }
+
+  .icon {
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+    color: #999;
+  }
+
+  .searchSelect {
+    flex: 0.5; /* Dropdown occupies less space */
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 8px;
+    background-color: inherit;
+    border-left: 1px solid #ddd; /* Add a divider between dropdown and input */
+  }
+
+  .searchButton {
+    flex: 0.3; /* Reduce button width */
+    background-color: #ff5a1f;
+    color: white;
+    border: none;
+    /* border-radius: 10px; */
+    padding: 10px;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .searchButton:hover {
+    background-color: #e14a0f;
+    transition: background-color 0.3s ease-in-out;
+  }
+}

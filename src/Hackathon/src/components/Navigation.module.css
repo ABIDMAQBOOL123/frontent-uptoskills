@@ -1,0 +1,197 @@
+/* Base Styles */
+.navbarTop {
+  display: flex;
+  justify-content: flex-end; /* Right-align the navbar */
+  align-items: center;
+  padding: 10px 20px;
+  background: #ffffff; /* Pure white background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02); /* Ultra-subtle shadow */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbarTop:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Slightly stronger shadow on hover */
+}
+
+/* Language Selector */
+.languageSelector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-right: 20px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.languageSelector:hover {
+  background: rgba(245, 245, 245, 1); /* Light gray background on hover */
+}
+
+.languageSelector span {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #4a5568; /* Dark gray text */
+  transition: color 0.3s ease;
+}
+
+.languageSelector:hover span {
+  color: #38b2ac; /* Sky blue on hover */
+}
+
+.languageSelector::after {
+  content: "▼";
+  font-size: 12px;
+  color: #4a5568; /* Dark gray text */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.languageSelector:hover::after {
+  transform: rotate(180deg);
+  color: #38b2ac; /* Sky blue on hover */
+}
+
+/* Dropdown Menu */
+.languageDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff; /* White background */
+  border: 1px solid rgba(0, 0, 0, 0.02); /* Ultra-subtle border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Ultra-subtle shadow */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+  z-index: 1000;
+}
+
+.languageDropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.languageDropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.languageDropdown ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #4a5568; /* Dark gray text */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.languageDropdown ul li:hover {
+  background-color: rgba(
+    56,
+    178,
+    172,
+    0.1
+  ); /* Light sky blue background on hover */
+  transform: translateX(5px); /* Slide effect on hover */
+}
+
+/* Navigation Links */
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: #4a5568; /* Dark gray text */
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navList li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #63b3ed,
+    #38b2ac
+  ); /* Sky blue gradient underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navList li a:hover {
+  color: #38b2ac; /* Sky blue text on hover */
+}
+
+.navList li a:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.loginButton {
+  background: linear-gradient(90deg, #63b3ed, #38b2ac); /* Sky blue gradient */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(99, 179, 237, 0.1); /* Ultra-subtle shadow */
+}
+
+.loginButton:hover {
+  background: linear-gradient(
+    90deg,
+    #4299e1,
+    #2c7a7b
+  ); /* Darker sky blue gradient on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(99, 179, 237, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbarTop {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navList li {
+    margin: 10px 0;
+  }
+
+  .loginButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .languageSelector {
+    margin-bottom: 10px;
+  }
+}

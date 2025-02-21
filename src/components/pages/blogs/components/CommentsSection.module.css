@@ -1,0 +1,90 @@
+/* CommentsSection.module.css */
+
+.commentsSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 12px;
+}
+
+.commentsSection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.commentsSection form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentsSection textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.commentsSection textarea:focus {
+  outline: none;
+  border-color: #805ad5;
+  box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.1);
+}
+
+.commentsSection button {
+  padding: 0.5rem 1rem;
+  background-color: #805ad5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.commentsSection button:hover {
+  background-color: #6b46c1;
+}
+
+.commentsList {
+  margin-top: 1.5rem;
+}
+
+.comment {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Dark mode styles */
+.darkMode .commentsSection {
+  background-color: #2d3748;
+}
+
+.darkMode .commentsSection h3 {
+  color: #e2e8f0;
+}
+
+.darkMode .commentsSection textarea {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.darkMode .commentsSection textarea:focus {
+  border-color: #805ad5;
+  box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.3);
+}
+
+.darkMode .comment {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}

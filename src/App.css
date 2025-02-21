@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 225px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  transform: scale(1.2); 
+  color: rgba(245, 112, 70, 1); 
+}
+
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.loading-animation img {
+  width: 150px;
+  height: 150px;
+}
+
+.loading-animation p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}

@@ -1,0 +1,188 @@
+/* CourseSection.module.css */
+
+.courseSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: rgba(210, 230, 228, 1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+  overflow: hidden;
+}
+
+.courseSectionContent {
+  max-width: 50%;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.courseSectionTag {
+  color: #2f4f4f;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.courseSectionTitle {
+  color: #1e1e1e;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.courseSectionButton {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: rgba(255, 107, 52, 1);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.courseSectionButton:hover {
+  background-color: rgba(230, 90, 40, 1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.courseSectionReview {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.courseSectionReviewImages {
+  display: flex;
+  gap: 12px;
+  margin-right: 15px;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.courseSectionReviewText {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.courseSectionImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInRight 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .courseSection {
+    flex-direction: column; /* Stack content vertically */
+    padding: 30px; /* Reduce padding */
+    gap: 30px; /* Increase gap between items */
+  }
+
+  .courseSectionContent {
+    max-width: 100%; /* Take full width */
+    text-align: center; /* Center-align text */
+  }
+
+  .courseSectionTitle {
+    font-size: 32px; /* Reduce font size */
+  }
+
+  .courseSectionReview {
+    justify-content: center; /* Center-align review section */
+  }
+
+  .courseSectionImage img {
+    max-width: 80%; /* Reduce image size */
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .courseSection {
+    padding: 20px; /* Further reduce padding */
+  }
+
+  .courseSectionTitle {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  .courseSectionButton {
+    padding: 12px 24px; /* Reduce button padding */
+    font-size: 14px; /* Reduce button font size */
+  }
+
+  .courseSectionReviewText {
+    font-size: 14px; /* Reduce review text size */
+  }
+
+  .profileImage {
+    width: 40px; /* Reduce profile image size */
+    height: 40px;
+  }
+
+  .courseSectionImage img {
+    max-width: 100%; /* Allow image to take full width */
+  }
+}
+
+/* CourseSection.module.css */
+
+.courseSectionContent.animate {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.courseSectionImage img.animate {
+  animation: fadeInRight 1s ease-in-out;
+}

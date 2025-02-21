@@ -1,0 +1,106 @@
+/* Container for the FAQ section */
+.faqsContainer {
+  width: 100%;
+  max-width: 1200px; /* Consistent with other sections */
+  margin: 0 auto; /* Center the container */
+  padding: 40px 20px; /* Consistent padding */
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif; /* Modern font */
+  background-color: #fff;
+  border-radius: 0; /* No rounded corners for consistency */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.faqsContainer h2 {
+  font-size: 2em;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* FAQ items */
+.faqs {
+  border-top: 1px solid #eee;
+}
+
+.faqItem {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-radius: 0; /* No rounded corners for consistency */
+  margin: 10px 0;
+}
+
+.faqItem:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+/* Question styling */
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Arrow for expanding/collapsing */
+.arrow {
+  font-size: 1.2em;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.faqItem.active .arrow {
+  transform: rotate(180deg); /* Rotate arrow when active */
+}
+
+/* Answer styling */
+.faqAnswer {
+  margin-top: 15px;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+}
+
+/* Active state for expanded items */
+.faqItem.active .faqAnswer {
+  opacity: 1;
+  max-height: 500px; /* Adjust based on content */
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faqsContainer {
+    padding: 20px 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .faqsContainer h2 {
+    font-size: 1.8em; /* Adjusted font size */
+    margin-bottom: 20px;
+  }
+
+  .faqItem {
+    padding: 15px; /* Adjusted padding */
+  }
+
+  .faqQuestion {
+    font-size: 1em; /* Adjusted font size */
+  }
+
+  .faqAnswer {
+    font-size: 0.9em; /* Adjusted font size */
+  }
+}

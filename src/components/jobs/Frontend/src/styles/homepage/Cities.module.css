@@ -1,0 +1,119 @@
+.citycontainer {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2rem 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+.subheading {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navButton {
+  background-color: #f3f4f6;
+  border: none;
+  padding: 0.5rem 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navButton:hover {
+  background-color: #e5e7eb;
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 0 0 200px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e5e7eb;
+}
+
+.cityName {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.jobs {
+  color: #10b981;
+  font-size: 1rem;
+}
+
+.buttonContainer {
+  margin-top: 2rem;
+}
+
+.viewAllButton {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.viewAllButton:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1rem;
+}

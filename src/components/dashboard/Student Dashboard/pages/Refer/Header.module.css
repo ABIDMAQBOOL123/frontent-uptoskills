@@ -1,0 +1,58 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menuButton {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.supportButton {
+  color: #4b5563;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.notificationButton {
+  color: #4b5563;
+  font-size: 1.25rem;
+}
+
+.profileImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+}

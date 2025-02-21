@@ -1,0 +1,21 @@
+/* ErrorBoundary.module.css */
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+}
+
+/* Dark mode styles */
+.darkMode .error {
+  background-color: #2d3748;
+  color: #fc8181;
+  border-color: #e53e3e;
+}

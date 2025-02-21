@@ -1,0 +1,186 @@
+/* General Container */
+.course-content {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title and Subtitle */
+.title {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.section-header {
+  cursor: pointer;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.section-header:hover {
+  background-color: #f9f9f9;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-left: 10px;
+}
+
+.section-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.lesson-count {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.arrow {
+  display: inline-block;
+  
+}
+
+
+
+/* Expanded Content */
+.expanded-content {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* More Sections Button */
+.more-sections {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.more-sections button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.more-sections button:hover {
+  color: #0056b3;
+}
+/* Lessons Container */
+.lessons {
+  display: block;
+  margin-top: 15px;
+  padding-left: 20px;
+  
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+
+/* Individual Lesson */
+.lesson {
+  display: flex;
+  margin: 19px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 10px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 52px;
+  border-bottom: 1px solid #ddd;
+  transition: .4s;
+}
+
+.lesson:last-child {
+  border-bottom: none;
+}
+
+.lesson-icon {
+  font-size: 1.2rem;
+  color: #444;
+  margin-right: 10px;
+}
+
+.lesson-title {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.lesson-preview {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.lesson-preview:hover {
+  color: #0056b3;
+}
+
+.lesson-locked {
+  font-size: 1.2rem;
+  color: #888;
+  margin-right: 15px;
+}
+
+/* Hover effect for individual lessons */
+.lesson:hover {
+  background-color: #f9f9f9;
+}
+.show-more {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #0073e6;
+}
+
+.show-more:hover {
+  color: #0073e6; /* Optional: Changes color on hover for better UI */
+}

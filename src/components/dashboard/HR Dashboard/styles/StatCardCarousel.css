@@ -1,0 +1,133 @@
+/* Mobile-only carousel styles */
+@media (max-width: 640px) {
+  .carousel-container {
+    padding: 0.5rem;
+    margin: 0 auto;
+    position: relative;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0; /* Remove gaps between cards for mobile */
+    padding: 0 0.5rem;
+  }
+
+  .carousel-item {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* Navigation Buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-button:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .carousel-button.prev {
+    left: -5px;
+  }
+
+  .carousel-button.next {
+    right: -5px;
+  }
+
+  /* Indicators */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot.active {
+    background: #666;
+    width: 20px;
+    border-radius: 3px;
+  }
+
+  /* Smooth transitions for indicators */
+  .carousel-dot {
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot.active {
+    width: 24px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 641px) {
+  .carousel-container {
+    padding: 1rem;
+  }
+
+  .carousel-track {
+    display: flex !important;
+    transform: none !important;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    transition: none;
+  }
+
+  .carousel-item {
+    min-width: 160px !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Hide mobile navigation */
+  .carousel-button,
+  .carousel-indicators {
+    display: none !important;
+  }
+}
+
+/* Add smooth transitions */
+.carousel-button {
+  transition: all 0.2s ease;
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Optional: Add touch support */
+@media (hover: none) {
+  .carousel-container {
+    touch-action: pan-y pinch-zoom;
+  }
+}

@@ -1,0 +1,132 @@
+:root {
+  --font-size-small: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 2.5rem;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+  --color-primary: #007bff;
+  --color-text: #333;
+  --color-background: #f9f9f9;
+  --color-card-background: #fff;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-border: #ccc;
+}
+
+.dark {
+  --color-text: #f9f9f9;
+  --color-background: #333;
+  --color-card-background: #444;
+  --color-shadow: rgba(255, 255, 255, 0.1);
+  --color-border: #555;
+}
+
+.blog-page {
+  padding: var(--spacing-medium);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+.blog-page h1 {
+  font-size: var(--font-size-large);
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: var(--spacing-medium);
+  right: var(--spacing-medium);
+  padding: var(--spacing-small);
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar {
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-small);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-card-background);
+  color: var(--color-text);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.blog-card {
+  background: var(--color-card-background);
+  padding: var(--spacing-medium);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.blog-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-small);
+}
+
+.blog-card p {
+  font-size: var(--font-size-small);
+  color: var(--color-text);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: var(--spacing-small);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-medium);
+  gap: var(--spacing-small);
+}
+
+.pagination button {
+  padding: var(--spacing-small) 15px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card-background);
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--color-text);
+}
+
+.pagination button.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.pagination button:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: var(--font-size-medium);
+  margin-top: var(--spacing-medium);
+}

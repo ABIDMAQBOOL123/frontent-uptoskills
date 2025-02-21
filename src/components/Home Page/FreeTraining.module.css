@@ -1,0 +1,186 @@
+/* FreeTraining.module.css */
+
+.cards {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 40px; /* Space between the cards */
+  padding: 0 20px;
+  list-style: none;
+  background-color: rgba(248, 248, 248, 1);
+}
+
+.cards li:nth-child(odd) {
+  justify-self: start; /* Float odd cards (left column) to the left */
+}
+
+.cards li:nth-child(even) {
+  justify-self: end; /* Float even cards (right column) to the right */
+}
+
+.card {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05); /* Light background */
+  border-radius: 15%;
+}
+
+.cardIcon img {
+  width: 60%;
+  height: auto;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #495057;
+  margin: 10px 0;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Background colors for cards */
+.cards li:nth-child(1) {
+  background-color: #e1fffb; /* Light blue */
+}
+
+.cards li:nth-child(2) {
+  background-color: #1a1a25; /* Dark card */
+  color: #fff;
+}
+
+.cards li:nth-child(3) {
+  background-color: #fcf8e1; /* Light yellow */
+}
+
+.cards li:nth-child(4) {
+  background-color: #ffffff; /* Neutral light */
+}
+
+.cards li:nth-child(2) .cardTitle,
+.cards li:nth-child(2) .cardDescription {
+  color: #fff; /* Override color to white */
+}
+
+.iconBackground {
+  margin: 20px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15%;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cardIcon:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.6); /* Add glow effect */
+}
+
+.iconBackground:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* Stacks cards in a single column */
+    gap: 20px; /* Reduced gap between cards for better spacing on small screens */
+    padding: 0; /* Removes extra padding */
+  }
+
+  .card {
+    margin: 0 auto; /* Centers the cards horizontally */
+    padding: 0;
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .cards {
+    /* Increase width for better mobile utilization */
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 20px; /* Reduce gap between cards */
+    padding: 0; /* Remove extra padding */
+  }
+
+  .card {
+    /* Cards take full width */
+    /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .cardIcon {
+    width: 50px; /* Reduce icon size */
+    height: 50px;
+  }
+
+  .cardIcon img {
+    width: 50%; /* Adjust image size */
+  }
+
+  .cardTitle {
+    font-size: 1.1rem; /* Slightly reduce font size */
+  }
+
+  .cardDescription {
+    font-size: 0.85rem; /* Slightly reduce font size */
+    line-height: 1.4; /* Adjust line height */
+  }
+
+  .iconBackground {
+    margin: 15px; /* Reduce margin */
+    padding: 20px; /* Reduce padding */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .cardTitle {
+    font-size: 1rem; /* Further reduce font size */
+  }
+
+  .cardDescription {
+    font-size: 0.8rem; /* Further reduce font size */
+  }
+
+  .iconBackground {
+    margin: 10px; /* Further reduce margin */
+    padding: 15px; /* Further reduce padding */
+  }
+}

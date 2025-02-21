@@ -1,0 +1,207 @@
+/* Footer.module.css */
+
+/* Footer Styles */
+.footer {
+  background-color: #042b2d;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 0; /* Compact padding */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Upper Section */
+.upper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Default layout for large screens */
+  gap: 10px; /* Add space between sections */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; /* Padding for better alignment */
+  background-color: #042b2d;
+  border-bottom: 1px solid #ffffff;
+  align-items: start; /* Align content to the top */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.upper section {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.logo {
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 100px; /* Scales better for smaller screens */
+  margin-bottom: 10px; /* Compact spacing */
+  margin: 0 auto;
+}
+
+.upper h2 {
+  font-size: 18px; /* Emphasized heading */
+  color: #ff6d34;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #ff6d34;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.upper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.upper ul li {
+  font-size: 15px; /* Improved readability */
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.upper ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.upper ul li a:hover {
+  color: #ff6d34;
+}
+
+/* Subscribe Us Section */
+.subscribeUs p {
+  font-size: 14px; /* Enhanced readability */
+  margin-bottom: 10px;
+}
+
+.subscribeUs h2 {
+  font-size: 18px;
+  color: #ff6d34;
+}
+
+/* Lower Section */
+.lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0; /* Compact padding */
+  gap: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.lowerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.lowerContainer img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lowerContainer img:hover {
+  transform: scale(1.1);
+}
+
+.lowerContainer input[type="text"] {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  width: 200px; /* Compact width */
+}
+
+.lowerContainer button {
+  background-color: #ff6d34;
+  margin-left: 5px;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px; /* Enhanced button text */
+  transition: background-color 0.3s ease;
+}
+
+.lowerContainer button:hover {
+  background-color: #e65b29;
+}
+
+.highlight {
+  color: #ff6d34; /* Eye-catching orange color */
+  font-weight: bold; /* Emphasize the text */
+  background-color: #ffffff1a; /* Subtle transparent white background */
+  padding: 2px 5px; /* Add spacing around the text */
+  border-radius: 3px; /* Smooth edges for a modern look */
+  font-size: 15px; /* Maintain readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upper {
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    padding: 0;
+    gap: 0;
+  }
+  .logo {
+    display: none;
+  }
+  .upper > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 5px;
+  }
+
+  .upper > section:last-child {
+    grid-column: span 2;
+    overflow: visible;
+  }
+
+  .upper h2 {
+    font-size: 16px;
+    margin: 8px auto;
+  }
+
+  .upper ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .lowerContainer input[type="text"] {
+    width: 60%; /* Full width on small screens */
+    margin-bottom: 10px;
+  }
+
+  .lowerContainer {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upper h2 {
+    font-size: 14px;
+  }
+
+  .upper ul li {
+    font-size: 12px;
+  }
+
+  .lowerContainer button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

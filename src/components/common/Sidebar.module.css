@@ -1,0 +1,184 @@
+/* Sidebar.module.css */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px; /* Slightly wider for better readability */
+  height: 100vh;
+  background-color: #ffffff; /* Keep background white */
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Sidebar Header (Optional) */
+.sidebarHeader {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0; /* Light gray border */
+  background-color: #ffffff; /* Keep background white */
+  text-align: center;
+}
+
+.sidebarHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: rgba(2, 100, 81, 1); /* Updated to rgba(2, 100, 81, 1) */
+  font-weight: 600;
+}
+
+/* Navigation Links */
+.sidebar .navLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.sidebar .navLink {
+  color: #333; /* Keep text color dark for readability */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  margin: 4px 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar .navLink:hover {
+  color: rgba(245, 112, 70, 1); /* Updated to rgba(245, 112, 70, 1) */
+  background-color: rgba(
+    245,
+    112,
+    70,
+    0.1
+  ); /* Light accent background on hover */
+  transform: translateX(5px);
+}
+
+.sidebar .navLink.active {
+  color: rgba(245, 112, 70, 1); /* Updated to rgba(245, 112, 70, 1) */
+  background-color: rgba(
+    245,
+    112,
+    70,
+    0.1
+  ); /* Light accent background for active link */
+  font-weight: 600;
+}
+
+/* Icons in Links (Optional) */
+.sidebar .navLink img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0.8);
+}
+
+.sidebar .navLink:hover img {
+  filter: brightness(1);
+}
+
+/* Action Buttons */
+.sidebar .actionButtons {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.sidebar .loginBtn,
+.sidebar .corporateBtn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(2, 100, 81, 1); /* Updated to rgba(2, 100, 81, 1) */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sidebar .loginBtn:hover,
+.sidebar .corporateBtn:hover {
+  background-color: rgba(1, 80, 65, 1); /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+.sidebar .loginBtn:active,
+.sidebar .corporateBtn:active {
+  transform: translateY(0);
+}
+
+/* Disable Scrolling */
+.noScroll {
+  overflow: hidden;
+}
+
+/* Menu Icon Styles */
+.menuIcon {
+  display: none; /* Always visible */
+  font-size: 24px;
+  padding: 12px;
+  background-color: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgba(2, 100, 81, 1); /* Updated to rgba(2, 100, 81, 1) */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menuIcon:hover {
+  color: rgba(245, 112, 70, 1); /* Updated to rgba(245, 112, 70, 1) */
+  background-color: rgba(
+    245,
+    112,
+    70,
+    0.1
+  ); /* Light accent background on hover */
+}
+
+/* Show menu icon only on mobile */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .sidebar .navLinks {
+    display: flex;
+  }
+}
+
+/* Scrollbar Styling (Optional) */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

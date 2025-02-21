@@ -1,0 +1,202 @@
+/* Container setup */
+.container {
+  display: flex;
+  justify-content: space-between; /* Distributes space between the sections */
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  background-color: #feece7;
+  padding: 5%;
+  box-sizing: border-box;
+  gap: 5%;
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+  overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Left Section: Text content */
+.leftSection {
+  flex: 1; /* Makes it responsive and flexible */
+  padding-left: 10px;
+}
+
+.leftSection h1 {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 2%;
+}
+
+.highlight {
+  color: #ff7a3b;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.2vw;
+  color: #6e6e6e;
+  margin-bottom: 3%;
+}
+
+.stars {
+  color: #ffc107;
+  margin: 0 1%;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.countryCode {
+  width: 25%; /* Adjust the width */
+  padding: 1.5%;
+  font-size: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.phoneInput {
+  width: 70%; /* Adjust the width */
+  padding: 1.5%;
+  font-size: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons styling */
+.buttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 10%;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.5% 3%;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.storeButton div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.storeButton img {
+  width: 15%; /* Smaller size for larger screens */
+}
+
+/* Right Section: Image */
+.rightSection {
+  flex: 1; 
+  text-align: center;
+  padding-right: 10px;
+}
+
+.image {
+  width: 80%;
+  max-width: 300px; 
+  max-height: 300px; 
+  object-fit: contain;
+}
+
+/* Responsive Design */
+
+/* Medium screens (1024px and smaller) */
+@media (max-width: 1024px) {
+  .container {
+      padding: 3%;
+      gap: 2%;
+  }
+
+  .leftSection h1 {
+      font-size: 4vw;
+  }
+
+  .rating {
+      font-size: 1.2vw;
+  }
+
+  .countryCode, .phoneInput {
+      font-size: 1.2vw;
+  }
+
+  .storeButton {
+      font-size: 1.2vw;
+  }
+
+  .storeButton img {
+      width: 20%;
+  }
+}
+
+/* Small screens (768px and smaller) */
+@media (max-width: 768px) {
+  .container {
+      flex-wrap: wrap; 
+      padding: 2%;
+  }
+
+  .leftSection,
+  .rightSection {
+      width: 100%; 
+      text-align: center; 
+  }
+
+  .leftSection h1 {
+      font-size: 5vw;
+  }
+
+  .rating {
+      font-size: 1.5vw;
+  }
+
+  .countryCode, .phoneInput {
+      font-size: 1.5vw;
+  }
+
+  .storeButton {
+      font-size: 1.5vw;
+  }
+
+  .storeButton img {
+      width: 25%;
+  }
+}
+
+/* Very small screens (480px and smaller) */
+@media (max-width: 480px) {
+  .container {
+      padding: 1%;
+  }
+
+  .leftSection h1 {
+      font-size: 6vw;
+  }
+
+  .rating {
+      font-size: 2vw;
+  }
+
+  .countryCode, .phoneInput {
+      font-size: 2vw;
+  }
+
+  .storeButton {
+      font-size: 2vw;
+  }
+
+  .storeButton img {
+      width: 30%;
+  }
+}

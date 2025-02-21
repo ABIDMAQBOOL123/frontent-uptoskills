@@ -1,0 +1,49 @@
+.appContainer {
+  margin: 0 auto;
+}
+
+.appContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the parent has enough height */
+  align-items: flex-start;
+}
+
+.leftContent {
+  flex: 1;
+  background-color: white;
+  padding: 0;
+  max-width: 75vw;
+  border-radius: 8px;
+  display: flex; /* Make leftContent a flex container */
+  flex-direction: column; /* Stack children vertically */
+  gap: 60px; /* Add gap between child components */
+}
+
+.rightContent {
+  box-sizing: border-box;
+  width: 350px;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  /* Sticky Behavior */
+  position: sticky;
+  top: 0px; /* Adjust this value as needed */
+  align-self: flex-start;
+}

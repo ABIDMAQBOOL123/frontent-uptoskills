@@ -1,0 +1,171 @@
+/* BlogPost.module.css */
+
+/* Base styles */
+.blogPost {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogPost:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.blogPost h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.blogPost p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode styles */
+.darkMode {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.darkMode h1,
+.darkMode h2,
+.darkMode h3 {
+  color: #ffffff;
+}
+
+.darkMode p {
+  color: #cbd5e0;
+}
+
+.darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #805ad5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.darkModeToggle:hover {
+  background-color: #6b46c1;
+}
+
+/* Table of contents */
+.toc {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.toc h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.toc li {
+  margin: 0.5rem 0;
+}
+
+.toc a {
+  color: #805ad5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toc a:hover {
+  color: #6b46c1;
+}
+
+/* Image lazy loading */
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #4a5568;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Error state */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .blogPost {
+    padding: 1.5rem;
+  }
+
+  .blogPost h1 {
+    font-size: 2rem;
+  }
+
+  .blogPost p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogPost {
+    padding: 1rem;
+  }
+
+  .blogPost h1 {
+    font-size: 1.75rem;
+  }
+
+  .blogPost p {
+    font-size: 0.95rem;
+  }
+}

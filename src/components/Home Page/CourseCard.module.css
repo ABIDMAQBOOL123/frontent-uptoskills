@@ -1,0 +1,270 @@
+/* CourseCard.module.css */
+
+/* Base container for the course section */
+.courseContainer {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and subtitle styling */
+.containerTitle h3 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.containerTitle h4 {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Slider wrapper for positioning arrows */
+.sliderWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Slider container for course cards */
+.sliderContainer {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab; /* Default cursor */
+}
+
+.sliderContainer.grabbing {
+  cursor: grabbing; /* Cursor when dragging */
+}
+
+/* Slider track for smooth scrolling */
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Individual course card styling */
+.courseCard {
+  flex-shrink: 0;
+  height: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; /* Allow vertical scrolling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px; /* Add margin between cards */
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Course card image section */
+.cardImage {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-bottom: 2px solid #f4f6f9;
+}
+
+.studentsBadge {
+  position: absolute;
+  bottom: -12px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Course card details section */
+.cardDetails {
+  flex: 1;
+  padding: 15px;
+  text-align: left;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  color: #1a1a2e;
+  margin: 8px 0;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: #4b4b63;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Enroll button and pricing section */
+.enrollBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.pricing {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.price {
+  color: #1a73e8;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #6c757d;
+  margin-left: 5px;
+}
+
+.enrollBtn {
+  background: linear-gradient(90deg, #1a73e8, #4b6cb7);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enrollBtn:hover {
+  background: linear-gradient(90deg, #4b6cb7, #1a73e8);
+}
+
+/* Arrow buttons for slider navigation */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #1a73e8;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow:hover {
+  background: #1a73e8;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leftArrow {
+  left: -60px;
+}
+
+.rightArrow {
+  right: -60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .courseCard {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .courseContainer {
+    padding: 20px;
+  }
+
+  .containerTitle h3 {
+    font-size: 1.75rem;
+  }
+
+  .containerTitle h4 {
+    font-size: 0.9rem;
+  }
+
+  .courseCard {
+    width: 80%; /* Adjust card width for mobile */
+    height: 350px;
+    margin: 0 10px;
+  }
+
+  .cardImage {
+    height: 150px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .enrollBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .pricing {
+    font-size: 0.9rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+
+  .studentsBadge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .leftArrow {
+    left: -50px;
+  }
+
+  .rightArrow {
+    right: -50px;
+  }
+}

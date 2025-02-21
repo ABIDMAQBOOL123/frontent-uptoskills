@@ -1,0 +1,14 @@
+/* joblistings.module.css */
+.hideScrollbar {
+    overflow-x: auto; /* Ensure scrolling is enabled */
+  }
+  
+  .hideScrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+  }
+  
+  .hideScrollbar {
+    -ms-overflow-style: none;  /* For Internet Explorer */
+    scrollbar-width: none;      /* For Firefox */
+  }
+  

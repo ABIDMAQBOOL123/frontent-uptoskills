@@ -1,0 +1,325 @@
+/* Timeline Container */
+.timelineContainer {
+  max-width: 1200px; /* Consistent with other sections */
+  width: 100%; /* Full width */
+  margin: 0 auto; /* Center the container */
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 0; /* No rounded corners for consistency */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  overflow: hidden;
+}
+
+/* Timeline Title */
+.timelineTitle {
+  font-size: 28px; /* Slightly larger font size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333; /* Dark gray text for contrast */
+  position: relative;
+}
+
+.timelineTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 470px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #00ffcc,
+    #0077ff
+  ); /* Gradient underline */
+  border-radius: 2px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Timeline Item */
+.timelineItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Timeline Line */
+.timelineLine {
+  position: relative;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Timeline Dot */
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff; /* White dot */
+  border: 3px solid #00ffcc; /* Neon teal border */
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.3), 0 0 20px rgba(0, 255, 204, 0.2); /* Subtle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineDot:hover {
+  transform: scale(1.2); /* Slight enlargement on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3); /* Enhanced glow on hover */
+}
+
+/* Timeline Connector */
+.timelineConnector {
+  width: 2px;
+  height: 20rem; /* Dynamic height */
+  background: linear-gradient(
+    to bottom,
+    #00ffcc,
+    #0077ff
+  ); /* Gradient from neon teal to blue */
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+/* Sparks Animation */
+.timelineConnector::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #00ffcc,
+    transparent
+  ); /* Spark trail */
+  animation: sparkMove 2s linear infinite;
+}
+
+@keyframes sparkMove {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Sparks Particles */
+.timelineConnector::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #00ffcc; /* Spark color */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 255, 204, 0.5), 0 0 10px rgba(0, 255, 204, 0.3),
+    0 0 20px rgba(0, 255, 204, 0.2);
+  animation: sparkParticles 2s linear infinite;
+}
+
+@keyframes sparkParticles {
+  0% {
+    transform: translateY(-10px) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Timeline Content */
+.timelineContent {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 0; /* No rounded corners for consistency */
+  background-color: #ffffff; /* White background */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.timelineContent::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 204, 0.1),
+    transparent 70%
+  ); /* Subtle radial gradient */
+  transform: rotate(45deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 24px rgba(0, 255, 204, 0.2); /* Enhanced shadow with neon teal */
+  background-color: #f9f9f9; /* Slightly lighter background on hover */
+}
+
+.timelineContent:hover::before {
+  opacity: 1; /* Show radial gradient on hover */
+}
+
+.timelineContent .front,
+.timelineContent .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0; /* No rounded corners for consistency */
+  padding: 20px;
+}
+
+.timelineContent .front {
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text for contrast */
+}
+
+.timelineContent .back {
+  background: linear-gradient(
+    145deg,
+    #0077ff,
+    #00ffcc
+  ); /* Gradient for the back side */
+  color: #ffffff; /* White text for contrast */
+  transform: rotateY(180deg);
+}
+
+/* Timeline Date */
+.timelineDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    145deg,
+    #0077ff,
+    #00ffcc
+  ); /* Gradient for the date container */
+  border-radius: 0; /* No rounded corners for consistency */
+  padding: 15px;
+  min-width: 80px;
+  text-align: center;
+  margin-right: 20px;
+  color: #ffffff; /* White text for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 255, 204, 0.3); /* Neon teal border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineDate:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 255, 204, 0.3); /* Enhanced shadow with neon teal */
+}
+
+.timelineDay {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timelineMonth {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Timeline Details */
+.timelineDetails {
+  flex-grow: 1;
+}
+
+.timelineEvent {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0077ff; /* Neon blue text */
+  margin-bottom: 5px;
+}
+
+.timelineDuration {
+  font-size: 14px;
+  color: #666666; /* Medium gray text */
+  margin-bottom: 10px;
+}
+
+.timelineDescription {
+  font-size: 14px;
+  color: #666666; /* Medium gray text */
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Error Message */
+.error {
+  color: #ff6b6b; /* Coral for errors */
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timelineContainer {
+    padding: 20px 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .timelineTitle {
+    font-size: 24px;
+  }
+
+  .timelineContent {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .timelineDate {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* Start and End Dates */
+.timelineDates {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666666; /* Medium gray text */
+  line-height: 1.5; /* Improved readability */
+}
+
+.timelineDates p {
+  margin: 0;
+}
+
+.timelineDates strong {
+  color: #0077ff; /* Neon blue for emphasis */
+}

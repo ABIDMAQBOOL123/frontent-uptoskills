@@ -1,0 +1,76 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight:bold;
+    color: #000;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    cursor: pointer;
+    color: #333;
+  }
+
+  .navLinks a{
+    text-decoration: none;
+    color: #383838;
+  }
+
+  .navLinks a:hover{
+    font-weight: bold;
+  }
+  
+  .getStarted {
+    background-color:inherit;
+    border: 2px solid black;
+    border-radius: 3rem;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    cursor: pointer;
+  }
+  
+  .getStarted::after {
+    background-color: black;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0);
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
+  
+  .getStarted:hover::after {
+    transform: translate(0, 0);
+  }
+  
+  .getStarted:hover {
+    border: 2px solid transparent;
+    color:white;
+    will-change: transform;
+  }

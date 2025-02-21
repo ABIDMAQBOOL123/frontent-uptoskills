@@ -1,0 +1,323 @@
+/* Base Styles */
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Compact height */
+  padding: 1.5rem; /* Reduced padding */
+  background: linear-gradient(
+      135deg,
+      rgba(252, 209, 223, 0.9),
+      rgba(202, 12, 74, 0.9)
+    ),
+    url("path/to/your/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gradientBackground {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* Smaller container */
+  margin: 0 auto;
+  padding: 1.5rem; /* Reduced padding */
+  border-radius: 15px; /* Slightly smaller border radius */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Increased opacity for better visibility */
+  backdrop-filter: blur(10px); /* Slightly more blur */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Softer shadow */
+  animation: fadeIn 1.5s ease-in-out;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.heroContent {
+  text-align: center; /* Center-aligned content */
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+.heroLogo {
+  margin-bottom: 1rem; /* Reduced margin */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.logoImage {
+  width: 100px; /* Smaller logo */
+  height: auto;
+  margin-bottom: 0.75rem; /* Reduced margin */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 8px rgba(202, 12, 74, 0.5)); /* Softer shadow */
+}
+
+.logoImage:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.tagline {
+  font-size: 1.1rem; /* Smaller font size */
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95); /* Brighter text */
+  animation: fadeIn 2.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.heroText {
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.heroTitle {
+  font-size: 2.2rem; /* Smaller title */
+  font-weight: bold;
+  margin-bottom: 0.75rem; /* Reduced margin */
+  animation: slideInLeft 1s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 209, 223, 1),
+    rgba(202, 12, 74, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 8px rgba(202, 12, 74, 0.5); /* Softer shadow */
+}
+
+.heroYear {
+  font-size: 1.5rem;
+  font-weight: 600; /* Bolder font weight */
+  margin-bottom: 1rem;
+  animation: slideInRight 1s ease-in-out;
+  color: #ffdd57; /* Bright yellow */
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px; /* Slightly more spacing */
+  text-shadow: 0 0 5px rgba(255, 221, 87, 0.6); /* Subtle glow */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.heroYear:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  text-shadow: 0 0 10px rgba(255, 221, 87, 0.8); /* Enhanced glow on hover */
+}
+
+.poweredByText {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95); /* Bright white */
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px; /* Slightly more spacing */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  animation: fadeIn 3s ease-in-out;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.poweredByText:hover {
+  color: #ffdd57; /* Bright yellow on hover */
+  text-shadow: 0 0 5px rgba(255, 221, 87, 0.6); /* Subtle glow on hover */
+}
+
+.poweredByImage {
+  width: 80px; /* Smaller powered-by logo */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 8px rgba(202, 12, 74, 0.5)); /* Softer shadow */
+}
+
+.poweredByImage:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: drop-shadow(
+    0 0 12px rgba(202, 12, 74, 0.8)
+  ); /* Enhanced glow on hover */
+}
+
+.heroPrize {
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: fadeIn 3.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.95); /* Bright white for readability */
+}
+
+.prizeAmount {
+  color: #ffdd57; /* Bright yellow for emphasis */
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 5px rgba(255, 221, 87, 0.6), 0 0 10px rgba(255, 221, 87, 0.6); /* Subtle glow */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Semi-transparent background for better readability */
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.prizeAmount:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 0 10px rgba(255, 221, 87, 0.8); /* Glow effect on hover */
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loadingSpinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.error {
+  color: #ff3860;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.floatingCircle {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 60px; /* Smaller size */
+  height: 60px;
+  background: rgba(252, 209, 223, 0.3);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite, rotate 10s linear infinite;
+  z-index: 1;
+}
+
+.floatingTriangle {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent; /* Smaller size */
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid rgba(202, 12, 74, 0.3);
+  animation: float 8s ease-in-out infinite, rotate 12s linear infinite;
+  z-index: 1;
+}
+
+.floatingSquare {
+  position: absolute;
+  bottom: 10%; /* Adjusted position */
+  left: 20%;
+  width: 50px; /* Smaller size */
+  height: 50px;
+  background: rgba(252, 209, 223, 0.3);
+  animation: float 7s ease-in-out infinite, rotate 14s linear infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg); /* Smaller movement */
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.particle {
+  position: absolute;
+  background: rgba(202, 12, 74);
+  width: 2px;
+  border-radius: 50%;
+  animation: particles 5s linear infinite;
+  z-index: 10001;
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.neonText {
+  color: white; /* Ensure the text color is bright */
+  text-shadow: 0 0 5px rgba(252, 209, 223, 0.6),
+    0 0 10px rgba(252, 209, 223, 0.6), 0 0 20px rgba(202, 12, 74, 0.6),
+    0 0 40px rgba(202, 12, 74, 0.6);
+}
+
+.hoverGlow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hoverGlow:hover {
+  box-shadow: 0 0 10px rgba(252, 209, 223, 0.8), 0 0 20px rgba(202, 12, 74, 0.8);
+}
+
+.uploadedBanner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadedBannerImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.toggleButton {
+  position: fixed; /* Fixed position to keep it in view */
+  top: 20px; /* Adjust as needed */
+  left: 15px; /* Adjust as needed */
+}

@@ -1,0 +1,149 @@
+.companyContainer {
+  padding: 2rem;
+  text-align: center;
+  max-width: 1200px; /* Limit container width for better readability */
+  margin: 0 auto; /* Center the container */
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Darker text for better contrast */
+}
+
+.highlight {
+  color: rgba(255, 95, 8, 1); /* Highlight color for emphasis */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* More flexible grid */
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 0; /* Add padding for better spacing */
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap cards into place when scrolling */
+  gap: 20px; /* Add gap between cards */
+  padding: 1rem 0; /* Add padding for better spacing */
+}
+
+.card {
+  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  scroll-snap-align: start; /* Snap cards to the start of the container */
+  text-align: center;
+  background: #fff; /* White background for cards */
+  border: 1px solid #e0e0e0; /* Light border for cards */
+  border-radius: 12px; /* Rounded corners */
+  padding: 1.5rem; /* Add padding inside cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto; /* Center the image */
+}
+
+.companyName {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.25rem; /* Larger font size for company name */
+  color: #111827; /* Darker text for better readability */
+}
+
+.viewJobs {
+  color: rgba(63, 204, 138, 1);
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500; /* Medium font weight for better readability */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.viewJobs:hover {
+  text-decoration: underline;
+  color: #111827; /* Darker green on hover */
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333; /* Darker color for better visibility */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navButton:hover {
+  color: #000; /* Black on hover */
+}
+
+.buttonContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center; /* Center the button */
+}
+
+.viewAllButton {
+  padding: 0.75rem 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  font-weight: 500; /* Medium font weight */
+  background: transparent; /* Transparent background */
+  color: black; /* Black text */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.viewAllButton:hover {
+  background: black;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Adjust for smaller screens */
+  }
+
+  .card {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .image {
+    width: 120px; /* Smaller image for smaller screens */
+    height: 120px;
+  }
+
+  .companyName {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+
+  .viewAllButton {
+    padding: 0.5rem 1.5rem; /* Smaller button for smaller screens */
+  }
+}

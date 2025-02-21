@@ -1,0 +1,136 @@
+/* Container */
+.jobDetails {
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 30px 50px;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin:30px 100px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .companyLogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: #f0f0f0;
+  }
+  
+  .companyInfo {
+    flex: 1;
+    margin-left: 25px;
+  }
+  
+  .companyName {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  .applyButton {
+    background: #ff7043;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .applyButton:hover {
+    background: #e64a19;
+  }
+  
+  /* Tags Section */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    margin-bottom: 16px;
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+  }
+  
+  .purpleTag {
+    background: #691b9a18;
+    color: #6a1b9a;
+  }
+  
+  .yellowTag {
+    background: #fbc12d39;
+  }
+  
+  .brownTag {
+    background: rgba(255, 192, 203, 0.267);
+    color: #5d4037;
+  }
+  
+  .greenTag {
+    background: #b4ffb86a;
+    color: #0e4f11;
+  }
+  
+  .blueTag {
+    background: #e3f2fd;
+    color: #08106a;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 20px;
+    color: Black;
+  }
+  
+  /* Job Details Section */
+  .details {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  /* Footer Section */
+  .footer {
+    display: flex;
+    gap: 20px;
+    margin-top:30px;
+  }
+  
+  .link {
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .link .icon {
+    margin-right: 3px;
+    color: grey;
+    font-size: 13px;
+  }
+  

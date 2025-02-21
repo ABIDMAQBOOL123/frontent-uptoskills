@@ -1,0 +1,42 @@
+.about {
+  box-sizing: border-box;
+  background-color: white; /* Match the left section's background color */
+  padding: 50px;
+  text-align: left;
+  line-height: 1.6;
+  border-radius: 0; /* No rounded corners for consistency */
+}
+
+.title {
+  font-size: 2rem; /* Adjusts the heading size */
+  font-weight: bold; /* Makes the heading more prominent */
+  color: #333; /* Neutral dark color for a clean look */
+  margin-bottom: 20px; /* Adds spacing below the heading */
+  text-transform: uppercase; /* Makes the heading stand out */
+}
+
+.description {
+  font-size: 1.1rem; /* Slightly larger font for better readability */
+  color: #555; /* A softer gray for less eye strain */
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+  text-align: justify; /* Aligns the text for a cleaner look */
+  letter-spacing: 0.5px; /* Adds a subtle spacing between letters */
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0; /* Adds spacing around the image */
+  background-color: #f5f5f5; /* Match the left section's background color */
+  border-radius: 0; /* No rounded corners for consistency */
+  padding: 16px; /* Consistent padding with left section containers */
+}
+
+.about-image {
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 0; /* No rounded corners for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for aesthetics */
+}

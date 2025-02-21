@@ -1,0 +1,60 @@
+/* Parent container to ensure proper behavior */
+.parent-container {
+  display: flex; /* Set layout for the parent */
+  align-items: flex-start;
+  object-fit: cover;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+
+/* Sticky section styling */
+.right-container {
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  position: sticky; /* Make it sticky */
+  top: 0; /* Stick to the top of the viewport */
+  height: fit-content;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.hero {
+  /* width: 90%; */
+  /* max-width: 80%; */
+}
+/* Responsive Styles */
+
+/* For smaller screens: stack the content and sidebar */
+@media (max-width: 768px) {
+  .parent-container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    width: 100%; /* Sidebar takes full width */
+    border-left: none;
+    border-top: 1px solid #ddd;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+}
+
+/* For very small screens: adjust padding and font size */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .right-section {
+    padding: 10px;
+  }
+
+  .pro-button,
+  .refer-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

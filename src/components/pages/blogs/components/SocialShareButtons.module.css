@@ -1,0 +1,33 @@
+/* SocialShareButtons.module.css */
+
+.socialButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialButtons button {
+  padding: 0.5rem 1rem;
+  background-color: #805ad5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.socialButtons button:hover {
+  background-color: #6b46c1;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .socialButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .socialButtons button {
+    width: 100%;
+  }
+}

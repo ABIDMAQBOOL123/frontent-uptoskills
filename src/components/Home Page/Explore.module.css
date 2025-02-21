@@ -1,0 +1,176 @@
+/* Explore.module.css */
+
+/* General container styling */
+.boxContainer {
+  position: relative; /* Essential for absolute positioning */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(242, 255, 249, 1);
+  z-index: 1; /* Bring the container above blurred spots */
+}
+
+.imageContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+/* Heading and description */
+.imageContainer h1 {
+  font-size: 2.5rem;
+  color: rgba(76, 209, 193, 1);
+  margin-bottom: 1rem;
+  z-index: 1; /* Ensures heading is above blurred spots */
+  position: relative;
+}
+
+.imageContainer img {
+  width: 70%;
+  z-index: 1; /* Ensures image is above blurred spots */
+  position: relative;
+}
+
+.imageContainer p {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #6c757d;
+  z-index: 1; /* Ensures text is above blurred spots */
+  position: relative;
+}
+
+/* Sub-items */
+.subitem2_1 img {
+  margin-right: 0.1rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+}
+
+.subitem2_2 h2 {
+  font-size: 1.1rem;
+  color: #343a40;
+  margin-bottom: 0rem;
+  padding-top: 0;
+}
+
+.subitem2_2 p {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Blurred circular spots */
+.blurredSpot {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  backdrop-filter: blur(100px);
+  z-index: 0; /* Keeps spots in the background */
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 1);
+}
+
+.spot1 {
+  background: rgba(201, 200, 255, 0.8);
+  top: 25%;
+  left: 35%;
+  filter: blur(100px);
+}
+
+.spot2 {
+  background: rgba(246, 164, 164, 0.5);
+  bottom: 40%;
+  right: 5%;
+  filter: blur(100px);
+}
+
+/* Grid container */
+.gridContainer1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; /* Small gap between grid items */
+  margin: 1rem 0; /* Adjusted for a tighter layout */
+  position: relative;
+  justify-items: center;
+}
+
+/* Empty cells */
+.emptyCell {
+  grid-column: span 1;
+  height: auto;
+  visibility: hidden;
+}
+
+/* Individual grid items */
+.item2 {
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s;
+  position: relative;
+  width: 95%;
+  height: auto;
+}
+
+.item2:hover {
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .gridContainer1 {
+    grid-template-columns: 1fr;
+  }
+
+  .item2,
+  .emptyCell {
+    grid-column: span 1;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Make the boxContainer stack vertically */
+  .boxContainer {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto; /* Adjust rows automatically */
+  }
+
+  /* Move right panel to the top and left panel to the bottom */
+  .imageContainer {
+    order: 1; /* Push left panel to the bottom */
+  }
+  .blurredSpot {
+    display: none;
+  }
+  .gridContainer1 {
+    order: 2; /* Bring right panel to the top */
+    grid-template-columns: 1fr; /* Single column layout for grid items */
+  }
+
+  /* Ensure circles stack vertically */
+  .blurredSpot {
+    width: 200px; /* Reduce size for smaller screens */
+    height: 200px;
+  }
+
+  /* Adjust item and grid item width */
+  .item2 {
+    /* Ensure items fit within mobile screen */
+    margin: 0 auto; /* Center grid items */
+  }
+  .emptyCell {
+    display: none;
+  }
+}

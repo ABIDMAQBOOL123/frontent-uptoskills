@@ -1,0 +1,39 @@
+.jfpContainer {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 192, 203, 0.3),
+    rgba(125, 125, 255, 0.201),
+    rgba(255, 192, 203, 0.3),
+    white
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+.mainContent {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px; /* Adds spacing between sections */
+  padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+  margin: 0 auto; /* Center the content */
+}
+
+.filtersSection {
+  align-self: flex-start; /* Ensure it doesn't stretch */
+  height: fit-content; /* Ensure it only takes the height of its content */
+}
+
+.jobListingsSection {
+}
+
+.promotionsSection {
+  box-sizing: border-box;
+}
+
+.footer {
+  margin-top: auto; /* Push footer to the bottom */
+}

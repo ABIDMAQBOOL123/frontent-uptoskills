@@ -1,0 +1,64 @@
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 50px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin:30px 100px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+  }
+  
+  .skillsSection {
+    margin-bottom: 20px;
+  }
+  
+  .subHeading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4e4d4d;
+  }
+  
+  .skills {
+    font-size: 16px;
+    color: #121a80;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+    color:#6a6a6a;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+  }
+  
+  .applyButton {
+    background: #ff7043;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .applyButton:hover {
+    background: #e64a19;
+  }
+  

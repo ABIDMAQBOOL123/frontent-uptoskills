@@ -1,0 +1,123 @@
+/* Modern Gradient Background for the Container */
+.container {
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: white; /* Clean white background */
+  border-radius: 20px; /* Rounded corners for the container */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure no overflow from animations */
+}
+
+/* Modern Typography */
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Modern font */
+  text-align: left;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif; /* Modern font */
+  text-align: left;
+}
+
+/* Flexbox Layout for Parameters */
+.parameters {
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Modern Card Design */
+.parameterBox {
+  background: #fcd1df; /* Soft pink background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 2rem;
+  width: 200px; /* Slightly wider cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect: Lift and Shadow */
+.parameterBox:hover {
+  transform: translateY(-5px); /* Slight lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  background: #f8c0d1; /* Slightly darker pink on hover */
+}
+
+/* Card Title Styling */
+.parameterTitle {
+  font-size: 1.6rem;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+  font-weight: 600; /* Semi-bold title */
+  font-family: "Poppins", sans-serif; /* Modern font */
+  transition: color 0.3s ease;
+}
+
+.parameterBox:hover .parameterTitle {
+  color: #2c3e50; /* Darker text on hover */
+}
+
+/* List Styling */
+.parameterList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.parameterList li {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: "Poppins", sans-serif; /* Modern font */
+  transition: color 0.3s ease;
+}
+
+.parameterList li::before {
+  content: "•";
+  color: #3498db;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+  transition: color 0.3s ease;
+}
+
+.parameterBox:hover .parameterList li {
+  color: #2c3e50; /* Darker text on hover */
+}
+
+.parameterBox:hover .parameterList li::before {
+  color: #8e44ad; /* Change bullet color on hover */
+}
+
+/* Add a subtle scale animation on hover */
+@keyframes subtleScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.parameterBox:hover {
+  animation: subtleScale 0.5s ease-in-out; /* Subtle scale animation on hover */
+}

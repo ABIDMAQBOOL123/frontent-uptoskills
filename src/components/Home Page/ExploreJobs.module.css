@@ -1,0 +1,153 @@
+/* ExploreJobs.module.css */
+
+/* Frame styling */
+.customFrame {
+  width: auto;
+  max-width: 1000.5px;
+  height: auto;
+  min-height: 300px; /* Reduced height for a rectangular shape */
+  margin: 20px auto; /* Center horizontally */
+  padding: 0px 30px;
+  padding-top: 25px;
+  margin-bottom: 40px;
+  border-radius: 30.15px;
+  background: linear-gradient(
+    159.69deg,
+    rgba(0, 56, 240, 0.94) 5.04%,
+    rgba(41, 157, 242, 0.75) 98.97%
+  );
+  position: relative;
+  overflow: hidden; /* Hide overflow to keep the image inside the frame */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex; /* Flexbox for centering */
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+
+/* Content inside the frame */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Space between text and image */
+  width: 100%; /* Take full width */
+}
+
+/* Text content */
+.textContent {
+  flex: 1;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-align: left; /* Align text to the left */
+  max-width: 60%; /* Limit text width to avoid overlapping */
+}
+
+.textContent h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.textContent p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.textContent button {
+  background-color: #ff6d34;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.textContent button:hover {
+  background-color: #e65b29;
+}
+
+/* Image styling */
+.imageContainer {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Align image to the bottom */
+  justify-content: flex-end; /* Align image to the right */
+  height: 100%; /* Take full height */
+}
+
+.womanImage {
+  width: auto; /* Adjust width automatically */
+  height: 100%; /* Take full height of the container */
+  max-height: 400px; /* Limit maximum height */
+  object-fit: contain; /* Ensure the image fits without distortion */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .customFrame {
+    margin: 10px;
+    flex-direction: column; /* Stack content vertically */
+    min-height: auto; /* Remove fixed height for mobile */
+  }
+
+  .content {
+    flex-direction: column; /* Stack text and image vertically */
+    gap: 20px; /* Add gap between text and image */
+  }
+
+  .textContent {
+    order: 1; /* Move text to the top */
+    max-width: 100%; /* Take full width */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .textContent h2 {
+    font-size: 28px; /* Reduce font size for smaller screens */
+    margin-bottom: 15px; /* Reduce margin for smaller screens */
+  }
+
+  .textContent p {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    margin-bottom: 15px; /* Reduce margin for smaller screens */
+  }
+
+  .textContent button {
+    font-size: 14px; /* Reduce button font size for smaller screens */
+    padding: 10px 20px; /* Reduce button padding for smaller screens */
+  }
+
+  .imageContainer {
+    order: 2; /* Move image to the bottom */
+    justify-content: center; /* Center image horizontally */
+    height: auto; /* Reset height */
+  }
+
+  .womanImage {
+    height: auto; /* Reset height */
+    max-height: 300px; /* Reduce max height for smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens (below 480px) */
+@media (max-width: 480px) {
+  .textContent h2 {
+    font-size: 24px; /* Further reduce font size for very small screens */
+  }
+
+  .textContent p {
+    font-size: 13px; /* Further reduce font size for very small screens */
+  }
+
+  .textContent button {
+    font-size: 13px; /* Further reduce button font size for very small screens */
+    padding: 8px 16px; /* Further reduce button padding for very small screens */
+  }
+
+  .womanImage {
+    max-height: 250px; /* Further reduce image size for very small screens */
+  }
+}

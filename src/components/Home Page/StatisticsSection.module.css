@@ -1,0 +1,195 @@
+/* StatisticsSection.module.css */
+
+/* Container */
+.statisticsSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 60vh;
+}
+
+/* Background Layer */
+hr {
+  border-bottom: 1px solid rgba(0, 50, 51, 0.53);
+}
+
+.blurredSpot {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  backdrop-filter: blur(100px); /* Inner blur effect */
+  z-index: -1; /* Keeps spots in the background */
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 1); /* More defined shadow */
+}
+
+/* First spot */
+.spot1 {
+  background: rgba(201, 200, 255, 0.8);
+  top: 1000px; /* Adjusted for better visibility */
+  left: 1px;
+  filter: blur(100px);
+}
+
+/* Map Layer */
+.mapLayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.mapImage {
+  filter: invert(1);
+
+  height: auto;
+  opacity: 1;
+}
+
+/* Stats Container */
+.statsContainer {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Individual Stat Item */
+.statItem {
+  text-align: center;
+  color: #ff6d34;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.statNumber {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+  color: #ff6d34;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.statNumber:hover {
+  color: #ff8a50; /* Softer orange on hover */
+  transform: scale(1.1);
+}
+
+.statLabel {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #4a4a4a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.statItem:hover .statLabel {
+  color: #333333; /* Darker text on hover */
+}
+
+/* Underline Effect */
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 8px auto;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.statItem:hover .underline {
+  transform: scaleX(1); /* Grows the underline */
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .statNumber {
+    font-size: 36px;
+  }
+
+  .statLabel {
+    font-size: 16px;
+  }
+
+  .underline {
+    width: 40px;
+    height: 3px;
+  }
+}
+
+/* Adjusted Blur Spot */
+.spot1 {
+  background: rgba(201, 200, 255, 0.8);
+  top: 10%; /* Moves the spot near the top */
+  right: 20%; /* Adjusts it to the bracket side */
+  position: absolute; /* Ensures the spot is positioned relative to the parent */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1; /* Keeps it behind other elements */
+}
+
+/* Map Layer */
+.mapImage {
+  filter: brightness(1) invert(1); /* Makes the map white */
+  max-width: 90%;
+  height: auto;
+  opacity: 0.8; /* Adjusts transparency */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  /* Adjust stats container for two items per row */
+  .statsContainer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .statItem {
+    flex: 1 1 45%; /* Each stat takes about 45% of the row */
+    max-width: 45%; /* Prevents stretching beyond 45% */
+    box-sizing: border-box;
+  }
+
+  .mapLayer {
+    width: 100%; /* Full width on mobile */
+    max-width: 100%; /* Prevents any overflow */
+    padding: 0 10px; /* Adds some padding for spacing */
+  }
+
+  .mapImage {
+    width: 100%; /* Full width of the screen */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures it doesn't overflow */
+  }
+
+  .statNumber {
+    font-size: 32px; /* Adjusts size for better readability */
+  }
+
+  .statLabel {
+    font-size: 14px; /* Smaller font for labels */
+  }
+}

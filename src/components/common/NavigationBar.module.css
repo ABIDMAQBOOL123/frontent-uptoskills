@@ -1,0 +1,320 @@
+/* NavigationBar.module.css */
+
+/* ===== Variables ===== */
+:root {
+  --primary-accent: #ff6d34;
+  --secondary-accent: #042b2d;
+  --background-light: #f2fff9;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --text-color: rgba(0, 0, 0, 1);
+  --placeholder-color: rgba(0, 0, 0, 0.7);
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Header Styling ===== */
+.premiumHeader {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-light);
+  color: var(--secondary-accent);
+  width: 100%;
+  position: static;
+  top: 0;
+  z-index: 999;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  border-bottom: 1px solid var(--glass-border);
+  transition: background 0.3s ease-in-out;
+}
+
+.premiumHeader:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== Navigation Bar ===== */
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+
+.logo img {
+  height: 40px;
+  filter: drop-shadow(0 3px 6px var(--shadow-color));
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.dropdownArrow {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 1px;
+  border-right: 2px solid var(--secondary-accent);
+  border-bottom: 2px solid var(--secondary-accent);
+  transform: rotate(45deg);
+  transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navItem:hover .dropdownArrow {
+  transform: rotate(225deg);
+}
+
+/* ===== Dropdown Menu ===== */
+.cardDropdown {
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: auto;
+  padding: 0;
+  padding-top: 18px;
+  overflow: visible;
+  z-index: 10;
+}
+
+/* ===== Buttons ===== */
+.actionButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.corporateBtn,
+.loginBtn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.corporateBtn {
+  background: linear-gradient(90deg, var(--primary-accent), #ff8a50);
+  border: none;
+  color: white;
+  box-shadow: 0px 8px 15px var(--shadow-color);
+}
+
+.corporateBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px var(--shadow-color);
+}
+
+.loginBtn {
+  background: transparent;
+  border: 2px solid rgba(2, 188, 165, 1);
+  color: rgba(2, 188, 165, 1);
+}
+
+.loginBtn:hover {
+  background: rgba(2, 188, 165, 1);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ===== Icons and Search ===== */
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px var(--shadow-color);
+  background-color: var(--background-light);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 100px;
+  color: var(--text-color);
+  padding: 5px 10px;
+}
+
+.searchInput::placeholder {
+  color: var(--placeholder-color);
+  opacity: 0.7;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.searchIcon:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navItem:hover .dropdownArrow,
+.navItem:hover .navLink,
+.cardDropdown:hover ~ .navLink {
+  color: var(--primary-accent);
+  border-color: var(--primary-accent);
+  transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out;
+}
+
+.corporateBtnWrapper {
+  position: relative;
+}
+
+.corporateDropdown {
+  position: absolute;
+  top: 100%;
+  left: -470%;
+  width: 65vw;
+  max-width: calc(100vw - 20px);
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.corporateBtnWrapper:hover .corporateDropdown {
+  display: block;
+}
+
+.mobileNavbar {
+  display: flex;
+  height: 3rem;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none !important;
+  }
+  .mainNav {
+    display: block;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo img {
+    width: 9rem;
+    height: 2.5rem;
+  }
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    gap: 15px;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+  .menuIcon img {
+    width: 10px;
+    height: 10px;
+  }
+  .navItem {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icons {
+    display: none;
+    width: 70%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .searchInput {
+    margin: 0;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .corporateBtn,
+  .loginBtn {
+    margin: 5px 0;
+  }
+
+  .dropdownArrow {
+    display: none;
+  }
+
+  .toggleButton {
+    display: block;
+    background: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+}
+/* Blur Background */
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+.loginModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1001;
+}
