@@ -61,7 +61,9 @@ import Hero from "./Hero";
 import NavigationBar from "../common/NavigationBar";
 import Partners from "./Partners";
 import Explore from "./Explore";
+import ResetPassword from "./ResetPassword";
 import ForgotPassword from "./ForgetPassword"; // Make sure the file name matches!
+// import LinkedInCallback from "./LinkedInCallback";
 
 // Lazy-loaded components
 const Login = lazy(() => import("./Login"));
@@ -75,7 +77,9 @@ function MainApp() {
         <Route path="/" element={<Hero />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-password/" element={<ForgotPassword />} />
+        {/* <Route path="/reset-password/:resetToken" element={<ResetPassword />} /> */}
+        {/* <Route path="/auth/linkedin/callback" element={<LinkedInCallback />} /> */}
       </Routes>
       <Partners />
       <FreeTraining />

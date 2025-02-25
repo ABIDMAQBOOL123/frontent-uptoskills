@@ -11,7 +11,10 @@ const MainApp = lazy(() => import("./components/Home Page/MainApp"));
 const Jobs = lazy(() => import("./components/jobs/Frontend/src/App"));
 const Courses = lazy(() => import("./components/Courses/src/App"));
 import HRDashboard from "./components/dashboard/HR Dashboard/App";
+import VerifyEmail from "./components/Home Page/VerifyEmail";
 import ForgotPassword from "./components/Home Page/ForgetPassword";
+import ResetPassword from "./components/Home Page/ResetPassword";
+import LinkedInCallback from "./components/Home Page/LinkedInCallback";
 const StudentDashboard = lazy(() =>
   import("./components/dashboard/Student Dashboard/App")
 );
@@ -55,7 +58,17 @@ function App() {
             <Route path="/student-dashboard/*" element={<StudentDashboard />} />
             <Route path="/courses/*" element={<Courses />} />
             <Route path="/hrdashboard/*" element={<HRDashboard />} />
+            <Route path="/verify-email/:token" element={<VerifyEmail />} />
+            <Route
+              path="/auth/linkedin/callback"
+              element={<LinkedInCallback />}
+            />
+
             {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+            <Route
+              path="/reset-password/:resetToken"
+              element={<ResetPassword />}
+            />
           </Routes>
         </Suspense>
       )}
